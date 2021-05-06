@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  server-auth:
+    image: ${IMAGE_URL}
+    build: .
+    container_name: ${CONTAINER}
+    restart: unless-stopped
+    env_file: "envs/.env.local.yml"
+    volumes:
+      - /Volumes/micro-server-go-auth:/secrets
+    ports:
+      - ${TARGET_LOCAL_PORT}:${TARGET_REMOTE_PORT}/tcp

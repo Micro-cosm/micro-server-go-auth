@@ -1,0 +1,14 @@
+
+# Go specific
+pkg
+vendor
+
+.ARCHIVE
+*.NEW
+*.SAVE
+
+.idea
+
+envs
+**/secrets
+**/.DS_Store
